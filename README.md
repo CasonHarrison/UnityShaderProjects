@@ -33,3 +33,19 @@ Creates custom torus mesh with customizable radius. also includes random seeds t
 
 Custom creates rotation, scaling, and positon transformation functions using the homogenous coordinate system. Then later, also provides projection to 2D space using an orthographic camera and a perspective camera (with variable focal length).
 
+## Procedural Creature Generator
+
+This project was inspired by Will Wright's creature creator in his revolutionary game Spore (check out his presentation of it [here](https://www.youtube.com/watch?v=8PXiNNXUUF8)). In this project, I focused on creating high-quality curved surfaces and using those to randomly create different creature shapes using random numbers. The key features of this project include:
+
+1. Creates Custom Catmullrom curve tubular mesh. This is done by manually defining control points, computing Frenet Frames based on these control points then using that to interpolate control points and create mesh.
+2. Uses random seeds to randomize creature size, leg count and size, wing prefab selection, and color.
+
+## Procedural Flock
+
+This project I follow Craig Reynolds' behavior rules of interaction described [here](https://www.cs.toronto.edu/~dt/siggraph97-course/cwr87/) to create a procedurally generated flock simulation. For the flock, I make a simple prefab to represent the boids/flock agents. Then I used weighted forces to balance the following behaviors
+**Behaviors**
+- Flock centering - agents head towards the average center position of neighbors
+- Avoidance - use flock agent 2d collision radius to avoid collisions with each other
+- Velocity matching - match the average direction and speed of neighboring flock members
+- Wandering - randomness added to give more realistic motion
+- Stay in world - prevent from going outside world bounds.

@@ -8,10 +8,28 @@ Here is a quick overview of each project and its contents
 This project was done following catlikecoding's mesh tutorial series. Each scene in this project implements a new different feature described below. Check out each scene to observe each feature.
 
 1. Composite Cube Scene.
-  - Create a custom cube using 6 different grid faces with loops custom setting the vertice positions, uv, and tangents.
+   - Create a custom cube using 6 different grid faces with loops custom setting the vertice positions, uv, and tangents.
 2. Cube Sphere Scene
-  - Custom cube sphere made by custom calculating vertex positions, normal vectors, and UV coordinates. Also includes optimizations like ensuring no duplicate vertices and splitting the mesh so it can be properly colored with different materials (more draw calls but worth it for fewer vertices here). 
+   - Custom cube sphere made by custom calculating vertex positions, normal vectors, and UV coordinates. Also includes optimizations like ensuring no duplicate vertices and splitting the mesh so it can be properly colored with different materials (more draw calls but worth it for fewer vertices here). 
 3. Cube Scene
-  - Creates a scene showcasing the creation of custom rounded cubes of different sizes and experiments with unity rigid body simulation.
+   - Creates a scene showcasing the creation of custom rounded cubes of different sizes and experiments with unity rigid body simulation.
 4. Mesh Deformation Scene
-  - Implements simple mesh deformation simulation by implementing a spring force to deform and return to the original shape of the cube sphere. The deformation force scales with size and can be tested in the game window by clicking the mesh with left mouse button.
+   - Implements simple mesh deformation simulation by implementing a spring force to deform and return to the original shape of the cube sphere. The deformation force scales with size and can be tested in the game window by clicking the mesh with left mouse button.
+  
+## Procedural Terrain Generator
+
+This project I create a procedural, tiling, terrain generator. The features of this project include:
+- Custom terrain height generation using Perlin noise.
+- Generates infinite tiles based on users position
+- Optimizes terrain chunks by implementing frustum and distance culling.
+- Uses random numbers to generate tree prefabs and randomly place them on the terrain surface.
+To do on this project: fix terrain seam issues to share vertices and properly calcuate normals. Add random height based texturing to surface.
+
+## Procedural Torus Mesh
+
+Creates custom torus mesh with customizable radius. also includes random seeds to color and procedurally generate donuts inside a spherical area using rejection sampling.
+
+## Transformation Matrices
+
+Custom creates rotation, scaling, and positon transformation functions using the homogenous coordinate system. Then later, also provides projection to 2D space using an orthographic camera and a perspective camera (with variable focal length).
+
